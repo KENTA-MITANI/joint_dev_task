@@ -75,7 +75,7 @@ def q8
   programming_languages = %w(ruby php python javascript)
 
   # 以下に回答を記載
-  programming_languages = programming_languages.map(&:capitalize)
+  programming_languages.map!(&:capitalize)
   upper_case_programming_languages = programming_languages.map(&:upcase)
   
   # 以下は変更しないで下さい
@@ -98,11 +98,9 @@ def q10
   # 以下に回答を記載
   foods.each do |food|
     if food.include?("うに")
-      print "#{food} > "
-      puts "大好きです"
+      puts "#{food} > 大好きです" 
     else
-      print "#{food} > "
-      puts "まぁまぁ好きです"
+      puts "#{food} > まぁまぁ好きです"
     end
   end
 end
@@ -123,6 +121,7 @@ def q12
   data = { user: { name: "satou", age: 33 } }
 
   # 以下に回答を記載
+  puts data[:user][:name]
 end
 
 def q13
@@ -138,7 +137,7 @@ def q14
   data = { name: "satou", age: 33, address: "saitama", hobby: "soccer", email: "hoge@fuga.com" }
 
   # 以下に回答を記載
-
+  p data.keys
 end
 
 def q15
